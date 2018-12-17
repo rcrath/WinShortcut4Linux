@@ -1,8 +1,7 @@
 # WinShortcut4Linux
 windows-sytle shortcuts for for linux file systems, especially for Dropbox users on Linux.
- ## WinShortcut4Linux
 
-###Rationale
+## Rationale
 
 Why make a windows style shortcut for Linux?  It is for using Dropbox cross-platform with windows.  Dropbox does not handle linux symbolic links gracefully at all. They translate symlinks as absolute paths, causing all sorts of misplaced file troubles where you save something in one folder in windows and expect it to be in the other if you have symlinked to something, but when you go back to linux it is not there and your symlinked folder has become an absolute path.  
 
@@ -27,7 +26,7 @@ So now, when I have a media related book in my media folder that I also think sh
 
 Copy the top level folder into your home folder,  then navigate to `~/.local/share/applications` in your graphical file browser of choice and click once on `.shortcut to .desktop`to mark it as trusted. Its name in the browser should change to `NAME`.  Do the same for `createshortcut.desktop`. That should make it searchably show up in your desktop environment's application menu if you just type in "shortcut" in the DE's search bar.  The two files can be run from anywhere as long as the two desktop files are in the same folder, but you will lose the DE menu availability if you change the location from `!/.local...`. After you save a new desktop file from the template you will need to mark your new desktop file as trusted the same way as above.  After that, it will launch the source file from its new location within dropbox without using symlinks.
 
-### example
+## example
 
 I have a pdf called `MEDIA_TECH.PDF` stored in my `~/Dropbox/media` folder but I also want to be able to access it from `~/Dropbox/tech/`.  Here's how:
 
@@ -39,7 +38,7 @@ I have a pdf called `MEDIA_TECH.PDF` stored in my `~/Dropbox/media` folder but I
 
 I need to do this for lots of files, so I find that the few seconds it shaves off of making a launcher saves me time and trouble.  All you need is the path to the source, which can be a folder or a file, and let `xdg-open` do the app choice.  
 
-### troubleshooting
+## troubleshooting
 
 1. Are you in Linux?  The shortcuts do not work in Windows.  You cannot make or launch them from Windows.  In the Windows context they are just little empty useless things, just like how Windows `.lnk` files don't work in a Linux.
 2. Are the two files in the same folder?  They must be in `~/local/share/applications` for your DE to pick them up.  
