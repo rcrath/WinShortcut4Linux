@@ -3,7 +3,7 @@ windows-sytle shortcuts for for linux file systems, especially for Dropbox users
 
 ## Rationale
 
-Why make a windows style shortcut for Linux?  It is for using Dropbox cross-platform with windows.  Dropbox does not handle linux symbolic links gracefully at all. They translate symlinks as absolute paths, causing all sorts of misplaced file troubles where you save something in one folder in windows and expect it to be in the other if you have symlinked to something, but when you go back to linux it is not there and your symlinked folder has become an absolute path.  
+Why make a windows style shortcut for Linux?  It is for using Dropbox on Linux.  Dropbox does not handle linux symbolic links gracefully at all. They translate symlinks as absolute paths, causing all sorts of misplaced file troubles where you save something in one folder in windows and expect it to be in the other if you have symlinked to something, but when you go back to linux it is not there and your symlinked folder has become an absolute path.  
 
 Dropbox's solution, which works for many cases is to only symlink to targets that are outside of the Dropbox folder hierarchy and put the actual files (`SOURCEFILE`) in the Dropbox hierarchy (`ln -s ~\Dropbox\SOURCEFILE ~\TARGETFILE`).  This is clunky, but I'll give an example.  I want to back up a presets folder for an audio synth called "`SYNTH`" with a subfolder "`presets`" in linux (you can also do this in windows after v. 7 I think, using the linking functions. I use a file explorer extension called LinkSHellExtension to do make this easier).  Here is the somewhat cludgy process:
 
