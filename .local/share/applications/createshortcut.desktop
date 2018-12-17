@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=create shortcut
+Exec=bash -e -c "exec \\$VISUAL \\"\\$(dirname \\"\\$0\\")/shortcut to .desktop\\"" %k
+Icon=/usr/share/icons/HighContrast/48x48/apps/text-editor.png
+Type=Application
+Comment=SAVE AS!!!!!
+
+ 
+
+
