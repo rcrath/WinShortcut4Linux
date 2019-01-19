@@ -5,7 +5,7 @@ windows-sytle shortcut for for linux file systems, especially for Dropbox users 
 
 Why make a windows style shortcuts for Linux?  It is for using Dropbox on Linux.  Dropbox does not handle linux symbolic links gracefully at all. Dropbox translates symlinks as absolute paths, causing all sorts of misplaced file troubles.
 
-Dropbox's solution, which works for many cases is to only symlink to targets that are outside of the Dropbox folder hierarchy and put the actual files (`SOURCEFILE`) in the Dropbox hierarchy (`ln -s ~\Dropbox\SOURCEFILE ~\TARGETFILE`). Clunky, but what do you do if you want to link to something with a source and target both *within* Dropbox?  At that point, the handling of symlinks as absolute paths creates troubles that will lead to missing and duplicated files.
+Dropbox's solution, which works for many cases, is to only symlink to targets that are outside of the Dropbox folder hierarchy and put the actual files (`SOURCEFILE`) in the Dropbox hierarchy (`ln -s ~\Dropbox\SOURCEFILE ~\TARGETFILE`). Clunky, but what do you do if you want to link to something with a source and target both *within* Dropbox?  At that point, the handling of symlinks as absolute paths creates troubles that will lead to missing and duplicated files.
 
 That is the case for the use of WinShortcut4Linux.  Regular Windows "shortcuts" are little `.lnk` files that do *not* pass themselves off as the original like a symlink, but rather just open the file or folder by putting the launch exec in the `.lmk` file.  In linux under the freedesktop specification, this is done with .desktop files, but you have to write the files manually or open a launcher app to artificially create the .desktop file, both of which are time-consuming and sometimes inconvenient.   
 
@@ -25,10 +25,10 @@ Now when I have a media related book in my media folder that I also think should
 
 I have a pdf called `MEDIA_TECH.PDF` stored in my `~/Dropbox/media` folder but I also want to be able to access it from `~/Dropbox/tech/`.  Here's how:
 
-- using the DE's search function, launch "shortcut" which should open in your `$VISUAL` text editor, for example, gedit or kate or atome or xed or .....
+- using the DE's search function, launch "shortcut" which should open in your `$VISUAL` text editor, for example, gedit or kate or atom or xed or .....
 - replace `NAME` with `MEDIA_TECH.PDF` (you can use any name you wish, it does not need to match the filename of the source).
 - replace `PATHTOFILE` with  `~/Dropbox/media/MEDIA_TECH.PDF`--Here the filname must match the source.
-- While editing the template file, you can double click on `NAME` and then `PATHTOFILE`and the item will be selected so that you can just type or copy-paste the new name and path without fiddling around too much.  
+- While editing the template file, you can double click on `NAME` or `PATHTOFILE`and the item will be selected so that you can just type or copy-paste the new name and path without fiddling around too much.  
 - `SAVE AS` to the target folder, here `~/Dropbox/tech/`using a descriptive filename instead `shortcut to .desktop`.  The filename does not need to be the same as anything, but as soon as you mark it trusted, as above, it changes to whatever you replace `NAME` with in the template, but I would recommend something similar to the `NAME` field.  And keep the `.desktop`extension. 
 - Double click on your new launcher and set it to trusted, then from there on you can double-click in the tech folder and it should open the file in the media folder without getting in Dropbox's way.
 
@@ -37,7 +37,7 @@ I need to do this for lots of files, so I find that the few seconds it shaves of
 ## troubleshooting
 
 1. Are you in Linux?  The shortcuts do not work in Windows.  You cannot make or launch them from Windows.  In the Windows context they are just little empty useless things, just like how Windows `.lnk` files don't work in a Linux.
-2. Are the two files in the same folder?  They must be in `~/local/share/applications` for your DE to pick them up.  
+2. Are the two github .desktop files installed in the same folder?  They must be in `~/local/share/applications` for your DE to pick them up.  
 3. Do you have xdg-open configured properly?
 4. Have you set $VISUAL to use your editor of choice? Type `echo $VISUAL` from a command prompt in linux to see.  
 5. For problems 3 and 4, refer to Google!
