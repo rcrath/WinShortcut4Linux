@@ -1,5 +1,5 @@
 # WinShortcut4Linux
-windows-sytle shortcuts for for linux file systems, especially for Dropbox users on Linux.
+windows-sytle shortcut for for linux file systems, especially for Dropbox users on Linux.
 
 ## Rationale
 
