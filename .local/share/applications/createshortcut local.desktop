@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Name=create shortcut LOCAL
+Exec=xdg-open /home/rich/.local/share/applications/SHORTCUT.desktop
+Icon=text-editor
+Type=Application
+Terminal=false
+Comment[en_US]=SAVE AS!!!!!
+

@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Name=create shortcut Broken UNIVERSAL 
+Exec=bash -c -e "exec $VISUAL $(pwd $0)\/SHORTCUT.desktop" %k
+Icon=text-editor
+Type=Application
+Terminal=false
+Comment[en_US]=SAVE AS!!!!!
+

@@ -1,9 +1,11 @@
 #!/usr/bin/env xdg-open
+
 [Desktop Entry]
 Type=Application
 Encoding=UTF-8
 Name=NAME
-Exec=xdg-open "PATHTOFILE
+Exec=xdg-open "PATHTOFILE"
 Icon=/usr/share/icons/HighContrast/scalable/emblems/emblem-symbolic-link.svg
 Terminal=false
-Comment= (1) make NAME for target (2) enter full absolute PATHTOFILE  of source (3) SAVE AS to the target directory
+Comment=(1) make NAME for target (2) enter full absolute PATHTOFILE  of source (3) SAVE AS to the target directory
+Name[en_US]=SHORTCUT.desktop
